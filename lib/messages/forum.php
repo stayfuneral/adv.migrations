@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Adv\Duplicates\Messages;
+namespace Adv\Migrations\Messages;
 
 
 use Bitrix\Forum\MessageTable;

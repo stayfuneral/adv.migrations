@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Adv\Duplicates;
+namespace Adv\Migrations;
 
 
 use Adv\Duplicates\Messages\Forum;

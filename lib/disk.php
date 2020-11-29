@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Adv\Duplicates;
+namespace Adv\Migrations;
 
 use Bitrix\Main\Loader;
 use Bitrix\Disk\Driver;

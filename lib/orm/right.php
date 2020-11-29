@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Adv\Duplicates\ORM;
+namespace Adv\Migrations\ORM;
 
 use Bitrix\Main;
 use Bitrix\Main\ORM\Data\DataManager;

@@ -9,7 +9,7 @@ $USER = new CUser;
 $USER->Authorize(1);
 
 use Bitrix\Main\Loader;
-use Adv\Duplicates\Migration;
+use Adv\Migrations\Migration;
 
 if(Loader::includeModule('adv.migrations')) {
     $migration = new Migration;
