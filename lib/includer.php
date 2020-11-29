@@ -11,21 +11,21 @@ class Includer
 {
     public static function getMigrationUsers()
     {
-        return self::getFile('users.php');
+        self::getFile('users.php');
     }
 
     public static function getFile($file)
     {
-        $path = __DIR__ . '/../files/' . $file;
-        if(!File::isFileExists($file)) {
-            throw new FileNotFoundException($path);
+
+        if(!File::isFileExists(realpath(__DIR__ .'/../files/' . $file))) {
+            throw new FileNotFoundException(realpath(__DIR__ .'/../files/' . $file));
         }
 
-        return require $path;
+        require realpath(__DIR__ .'/../files/' . $file);
     }
 
     public static function getRunMigrationScript()
     {
-        return self::getFile('migration/run.php');
+        self::getFile('migration/run.php');
     }
 }
