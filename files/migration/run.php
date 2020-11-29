@@ -11,9 +11,11 @@ $USER->Authorize(1);
 use Bitrix\Main\Loader;
 use Adv\Duplicates\Migration;
 
-Loader::includeModule('adv.duplicates');
+if(Loader::includeModule('adv.migrations')) {
+    $migration = new Migration;
+    $migration->run();
+}
 
-$migration = new Migration;
-$migration->run();
+
 
 require $_SERVER['DOCUMENT_ROOT'] . '/bitrix/modules/main/include/epilog_after.php';
