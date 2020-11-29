@@ -1,0 +1,16 @@
+{
+  "b_forum_message": "AUTHOR_ID",
+  "b_im_message": "AUTHOR_ID",
+  "b_im_chat": "AUTHOR_ID",
+  "b_forum_private_message": "AUTHOR_ID",
+  "b_im_message_favorite": "USER_ID",
+  "b_sonet_message": ["FROM_USER_ID","TO_USER_ID"],
+  "b_sonet_group": "OWNER_ID",
+  "b_sonet_user2group": ["USER_ID","INITIATED_BY_USER_ID"],
+  "b_bp_task_user": ["USER_ID", "ORIGINAL_USER_ID"],
+  "b_tasks": ["CREATED_BY", "RESPONSIBLE_ID"],
+  "b_tasks_checklist_items": ["CREATED_BY","TOGGLED_BY"],
+  "b_tasks_member": "USER_ID",
+  "b_im_relation": "USER_ID",
+  "b_disk_right": "ACCESS_CODE"
+}
