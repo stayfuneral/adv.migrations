@@ -26,7 +26,7 @@ class adv_migrations extends CModule
     {
         $file = $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/adv_migration/run.php';
         $content = '<?php' . PHP_EOL . PHP_EOL;
-        $content .= '$_SERVER[\'DOCUMENT_ROOT\'] = \'/home/bitrix/ext_www/portal.advgroup.fbweb.ru\';' . PHP_EOL;
+        $content .= '$_SERVER[\'DOCUMENT_ROOT\'] = \''.$_SERVER['DOCUMENT_ROOT'].'\';' . PHP_EOL . PHP_EOL;
         $content .= 'require $_SERVER[\'DOCUMENT_ROOT\'] . \'/local/modules/adv.migrations/files/migration/run.php\';';
 
         return File::putFileContents($file, $content, 1);
