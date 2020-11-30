@@ -4,7 +4,7 @@
 namespace Adv\Migrations;
 
 
-use Adv\Duplicates\Messages\Forum;
+use Adv\Migrations;
 
 class Migration
 {
@@ -14,14 +14,14 @@ class Migration
     public function __construct()
     {
         $this->users = Includer::getMigrationUsers();
-        $this->disk = new Disk;
+        $this->disk = new Entity\Disk;
     }
 
     public function run()
     {
         foreach ($this->users as $newUser => $oldUser) {
-            Tasks::updateTasks($oldUser, $newUser);
-            Forum::changeMessageAuthor($oldUser, $newUser);
+            Entity\Tasks::updateTasks($oldUser, $newUser);
+            Entity\Messages\Forum::changeMessageAuthor($oldUser, $newUser);
             $this->disk->setRightsToDiskObjects($oldUser, $newUser);
         }
     }

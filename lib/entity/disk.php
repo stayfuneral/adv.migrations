@@ -1,11 +1,11 @@
 <?php
 
 
-namespace Adv\Migrations;
+namespace Adv\Migrations\Entity;
 
 use Bitrix\Main\Loader;
 use Bitrix\Disk\Driver;
-use Adv\Duplicates\ORM\RightTable;
+use Adv\Migrations\ORM\DiskRightsTable;
 
 Loader::includeModule('disk');
 
@@ -79,7 +79,7 @@ class Disk
     public function getUserObjects($userId)
     {
         $objectIds = [];
-        $obJectRights = RightTable::getList($this->prepareObjectParams($userId))->fetchAll();
+        $obJectRights = DiskRightsTable::getList($this->prepareObjectParams($userId))->fetchAll();
 
         foreach ($obJectRights as $right) {
             $objectIds[] = (int) $right['OBJECT_ID'];
@@ -107,7 +107,7 @@ class Disk
             $preparedRightParams = $this->prepareRightParams($newUser, $userObjects);
 
             foreach ($preparedRightParams as $rightParam) {
-                $add = RightTable::add($rightParam);
+                $add = DiskRightsTable::add($rightParam);
 
                 if($add->isSuccess()) {
                     $result[$add->getId()] = $add->isSuccess();

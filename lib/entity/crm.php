@@ -1,20 +1,11 @@
 <?php
 
 
-namespace Adv\Migrations;
+namespace Adv\Migrations\Entity;
 
 
-use Bitrix\Crm;
-
-class CrmEntity
+class Crm
 {
-    protected static $entities = [
-        Crm\DealTable::class,
-        Crm\LeadTable::class,
-        Crm\ContactTable::class,
-        Crm\CompanyTable::class,
-        Crm\InvoiceTable::class
-    ];
 
     public static function prepareParams($userId)
     {

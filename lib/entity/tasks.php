@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Adv\Migrations;
+namespace Adv\Migrations\Entity;
 
 use Bitrix\Main\Application;
 use Bitrix\Main\Loader;
